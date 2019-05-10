@@ -8,8 +8,7 @@ export interface pageContentsType {
 }
 
 export interface pageContentType {
-  mainText: string
-  mainTitle?: string
+  mainText?: string
   prebLink: string
   nextLink: string
 }

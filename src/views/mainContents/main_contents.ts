@@ -1,7 +1,12 @@
 import { Component, Vue, Watch } from "vue-property-decorator"
+import router from "@/router"
 import { transitionPageInfoType, pageContentsType } from "@/types"
+import marked, { Renderer } from "marked"
+import templateMd from "./markdown/template.md"
 import PageTitle from "@/components/pageTitle/PageTitle.vue"
 import PageContent from "@/components/pageContent/PageContent.vue"
+
+const markedRenderer: Renderer = new marked.Renderer()
 
 @Component({
   components: {
@@ -14,6 +19,7 @@ import PageContent from "@/components/pageContent/PageContent.vue"
   }
 })
 export default class MainContents extends Vue {
+
   public created() {
     this.setContentInfo()
   }
@@ -25,37 +31,49 @@ export default class MainContents extends Vue {
 
   public basicContent: boolean = true
   public contents: pageContentsType = {
-    summary: {
-      mainText: "LTDR",
-      mainTitle: "今日のお話",
+    template: {
       prebLink: "/selfIntroduction",
-      nextLink: "/sectionTitle/hoge"
-    },
-    hoge_1: {
-      mainText: "hogehoge",
-      mainTitle: "小タイトル",
-      prebLink: "/sectionTitle/hoge",
-      nextLink: "/mainContents/fuga"
-    },
-    fuga: {
-      mainText: "hogehoge",
-      mainTitle: "小タイトル",
-      prebLink: "/mainContents/hoge_1",
       nextLink: "/sectionTitle/end"
     }
   }
+
   public transitionPageInfo: transitionPageInfoType = {
     preb: "",
     next: ""
   }
+
   public pageContentText: string = ""
   public pageName: string = ""
   public pageTitleText: string = ""
+  public markdownTextObject: {[key: string]: string} = {
+    template: templateMd.source
+  }
+
+  /**
+   * Create HTML
+   */
+  public compiledMarkdownText() {
+    const key: string = this.$route.params.pageName
+    const mdText: string = this.markdownTextObject[key]
+    if (mdText) {
+      markedRenderer.code = function(code, lang) {
+        const codeBody: string = `<pre><code class="language-${lang} code-block">${code}</code></pre>`
+        return codeBody
+      }
+      markedRenderer.image = function(href, title, text) {
+        return `<p class="image-wrapper"><img src=${href} alt=${text} /></p>`
+      }
+      const markedContent: string = marked(mdText, {
+        renderer: markedRenderer
+      })
+      return markedContent
+    } else {
+      return router.push("/")
+    }
+  }
 
   public setContentInfo() {
     this.pageName = this.$route.params.pageName
-    this.pageContentText = this.contents[this.pageName].mainText
-    this.pageTitleText = this.contents[this.pageName].mainTitle as string
     this.transitionPageInfo.preb = this.contents[this.pageName].prebLink
     this.transitionPageInfo.next = this.contents[this.pageName].nextLink
   }

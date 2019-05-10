@@ -25,7 +25,7 @@ export default class SectionTitle extends Vue {
     },
     end: {
       mainText: "EOF",
-      prebLink: "/mainContents/fuga",
+      prebLink: "/mainContents/template",
       nextLink: "/"
     }
   }

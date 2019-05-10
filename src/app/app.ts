@@ -1,12 +1,7 @@
 import { Component, Vue } from "vue-property-decorator"
 import router from "@/router"
-import DanmakuLayer from "@/components/danmakuLayer/DanmakuLayer.vue"
 
-@Component({
-  components: {
-    DanmakuLayer
-  }
-})
+@Component({})
 export default class App extends Vue {
   public prebArrow: boolean = false
   public nextArrow: boolean = false
@@ -26,7 +21,7 @@ export default class App extends Vue {
   }
 
   public transitionPage(action: string) {
-    const targetRoute: string = this.$parent.$children[0].$children[2].$data
+    const targetRoute: string = this.$parent.$children[0].$children[1].$data
       .transitionPageInfo[action]
     if (targetRoute !== "") {
       router.push(targetRoute)
