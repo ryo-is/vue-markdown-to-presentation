@@ -1,0 +1,16 @@
+#app
+  .app-wrapper.base-height(:class="colorMode")
+    DanmakuLayer
+    el-row.transition-page-area.base-height
+      el-col(:span="12")
+        .preb-page.base-height(@click="transitionPage('preb')" @mouseenter="showArrow('preb')" @mouseleave="hiddenArrow('preb')")
+          .preb-arrow(v-show="prebArrow")
+            img(src="../assets/left_arrow.png", alt="")
+      el-col(:span="12")
+        .next-page.base-height(@click="transitionPage('next')" @mouseenter="showArrow('next')" @mouseleave="hiddenArrow('next')")
+          .next-arrow(v-show="nextArrow")
+            img(src="../assets/right_arrow.png", alt="")
+    .change-color-area(@click="changeColorMode()")
+      i.el-icon-refresh
+    transition(name="router-transition" enter-active-class="animated slideInRight")
+      router-view

@@ -1,0 +1,21 @@
+.main-contents {
+  .unique-page {
+    font-size: 4.5vw;
+    height: calc(100% - 5vh - 4.5vw);
+    margin: 5vh auto 0;
+    width: 90vw;
+
+    .image-area {
+      margin: 30px auto 0;
+      width: 50vw;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .demo-img-area {
+      margin-top: 30px;
+    }
+  }
+}

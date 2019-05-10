@@ -1,0 +1,10 @@
+@import "../../common/style/config";
+
+.page-title {
+  border-left: 15px solid $vue-light-color;
+  font-size: 3vw;
+  font-weight: bold;
+  line-height: 4.5vw;
+  padding-left: 20px;
+  text-align: left;
+}

@@ -1,0 +1,21 @@
+.introduction.base-height
+  PageTitle(:title-text="pageTitleText")
+  el-row
+    el-col.images-content(:span="9")
+      .self-image
+        img(src="../../assets/self_image.png", alt="self-image")
+        .sns-image
+          img(src="../../assets/ItemIcon038a.png", alt="sns-image")
+    el-col.text-content(:span="15")
+      .name-text-area.text-area
+        .tag-mark ■
+        .tag Name
+        .text {{ nameText }}
+      .jobs-text-area.text-area
+        .tag-mark ■
+        .tag Jobs
+        .text {{ jobText }}
+      .community-text-area.text-area
+        .tag-mark ■
+        .tag Community
+        .text {{ communityText }}

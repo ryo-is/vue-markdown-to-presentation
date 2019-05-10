@@ -1,0 +1,69 @@
+@import "../../common/style/config";
+
+.introduction {
+
+  .el-row {
+    height: calc(100% - 4.5vw);
+  }
+
+  .images-content {
+    height: 100%;
+    position: relative;
+
+    .self-image {
+      left: 5vw;
+      position: absolute;
+      top: 10vh;
+      width: 24vw;
+    }
+
+    .sns-image {
+      bottom: -5vh;
+      position: absolute;
+      right: -5vw;
+      width: 14vw;
+    }
+  }
+
+  .text-content {
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 5vh;
+    text-align: left;
+
+    .text-area {
+      margin-top: 20px;
+      position: relative;
+
+      .tag-mark {
+        bottom: 0;
+        color: $vue-light-color;
+        font-size: 1.8vw;
+        line-height: 4vw;
+        margin: auto;
+        padding-left: .5vw;
+        position: absolute;
+        top: 0;
+      }
+
+      .tag {
+        border-bottom: 5px solid $vue-light-color;
+        font-size: 3vw;
+        font-weight: bold;
+        line-height: 4vw;
+        padding-left: 3vw;
+        width: 80%;
+      }
+
+      .text {
+        font-size: 3vw;
+        padding-left: 4rem;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+  }
+}
