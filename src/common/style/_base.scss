@@ -5,6 +5,19 @@ body {
   background-color: $color-black;
   margin: 0;
   width: 100%;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar:horizontal {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #cecece;
+    border-radius: 3px;
+  }
 }
 
 img {
@@ -14,4 +27,13 @@ img {
 .base-height {
   height: 56.25vw;
   max-height: 100vh;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #cecece;
+    border-radius: 3px;
+  }
 }

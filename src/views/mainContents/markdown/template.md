@@ -6,15 +6,7 @@
 
 #### h4 title
 
-hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge
-
-*font*
-
-**font**
-
-`code area`
-
-[link](https://iot.kyoto)
+hoge *hoge* hogehoge **hoge** hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge
 
 ![imageContent](https://s3-ap-northeast-1.amazonaws.com/r.izumi/images/ItemIcon038a.png)
 
