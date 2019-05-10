@@ -1,21 +1,50 @@
+@import "../../common/style/config";
+
 .main-contents {
-  .unique-page {
-    font-size: 4.5vw;
-    height: calc(100% - 5vh - 4.5vw);
-    margin: 5vh auto 0;
-    width: 90vw;
+  overflow-y: scroll;
 
-    .image-area {
-      margin: 30px auto 0;
-      width: 50vw;
+  .md-content {
+    font-size: 2vw;
+    text-align: left;
 
-      img {
-        width: 100%;
+    h1 {
+      border-left: 15px solid $vue-light-color;
+      font-size: 3vw;
+      font-weight: bold;
+      line-height: 4.5vw;
+      margin: 0;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    h2, h3, h4 {
+      padding: 0 3rem;
+    }
+
+    p, ul, ol {
+      margin: 1rem 3rem;
+      word-break: break-all;
+
+      &.image-wrapper {
+        text-align: center;
+
+        img {
+          max-width: 25%;
+        }
       }
     }
 
-    .demo-img-area {
-      margin-top: 30px;
+    pre {
+      background-color: $vue-dark-color;
+      box-sizing: border-box;
+      margin: 14px 2rem;
+      padding: 18px 36px;
+
+      .code-block {
+        color: $code-text-color;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-size: 1.25rem;
+      }
     }
   }
 }

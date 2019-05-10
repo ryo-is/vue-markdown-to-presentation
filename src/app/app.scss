@@ -11,15 +11,6 @@
   text-align: center;
   width: 100vw;
 
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #cecece;
-    border-radius: 3px;
-  }
-
   .app-wrapper {
     position: relative;
     width: 100vw;
@@ -46,28 +37,42 @@
     .transition-page-area {
       position: absolute;
       width: 100vw;
+    }
+
+    .preb-page,
+    .next-page {
+      position: absolute;
+      width: 25vw;
       z-index: 1000;
 
-      .preb-arrow,
-      .next-arrow {
-        bottom: 0;
-        height: 56px;
-        margin: auto;
-        opacity: .2;
-        position: absolute;
-        top: 0;
-
-        img {
-          height: 100%;
-          width: auto;
-        }
+      &.preb-page {
+        left: 0;
       }
 
-      .preb-arrow {
+      &.next-page {
+        right: 0;
+      }
+    }
+
+    .preb-arrow,
+    .next-arrow {
+      bottom: 0;
+      height: 56px;
+      margin: auto;
+      opacity: .2;
+      position: absolute;
+      top: 0;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+
+      &.preb-arrow {
         left: 20px;
       }
-
-      .next-arrow {
+  
+      &.next-arrow {
         right: 20px;
       }
     }
