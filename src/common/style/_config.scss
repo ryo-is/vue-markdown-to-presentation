@@ -2,7 +2,7 @@ $color-black: #000000;
 $color-white: #ffffff;
 
 $base-back-color: #f8fceb;
-$base-font-color: #495664;
+$base-font-color: #47515c;
 
 $base-light-color: #f8fceb;
 $base-dark-color: #495664;
@@ -11,3 +11,6 @@ $vue-dark-color: #35495e;
 $vue-light-color: #42b883;
 
 $code-text-color: #e8e8e8;
+
+$dark-back-font-color: $code-text-color;
+$dark-back-bg-color: #3f464d;

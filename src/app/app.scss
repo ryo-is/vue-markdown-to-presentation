@@ -21,8 +21,8 @@
     }
 
     &.dark-mode {
-      background-color: $base-font-color;
-      color: $base-back-color;
+      background-color: $dark-back-bg-color;
+      color: $dark-back-font-color;
     }
 
     .change-color-area {
