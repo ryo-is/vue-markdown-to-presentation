@@ -2,9 +2,16 @@ import { Component, Vue, Watch } from "vue-property-decorator"
 import router from "@/router"
 import { transitionPageInfoType, pageContentsType } from "@/types"
 import marked, { Renderer } from "marked"
-import templateMd from "./markdown/template.md"
 import PageTitle from "@/components/pageTitle/PageTitle.vue"
 import PageContent from "@/components/pageContent/PageContent.vue"
+
+import templateMd from "./markdown/template.md"
+import page1Md from "./markdown/kantaiTs1/page_1.md"
+import page2Md from "./markdown/kantaiTs1/page_2.md"
+import page3Md from "./markdown/kantaiTs1/page_3.md"
+import page4Md from "./markdown/kantaiTs1/page_4.md"
+import page5Md from "./markdown/kantaiTs1/page_5.md"
+import page6Md from "./markdown/kantaiTs1/page_6.md"
 
 const markedRenderer: Renderer = new marked.Renderer()
 
@@ -34,6 +41,30 @@ export default class MainContents extends Vue {
     template: {
       prebLink: "/selfIntroduction",
       nextLink: "/sectionTitle/end"
+    },
+    page_1: {
+      prebLink: "/sectionTitle/page_6",
+      nextLink: "/mainContents/page_2"
+    },
+    page_2: {
+      prebLink: "/mainContents/page_1",
+      nextLink: "/sectionTitle/page_10"
+    },
+    page_3: {
+      prebLink: "/sectionTitle/page_12",
+      nextLink: "/mainContents/page_4"
+    },
+    page_4: {
+      prebLink: "/mainContents/page_3",
+      nextLink: "/mainContents/page_5"
+    },
+    page_5: {
+      prebLink: "/mainContents/page_4",
+      nextLink: "/sectionTitle/page_13"
+    },
+    page_6: {
+      prebLink: "/sectionTitle/page_14",
+      nextLink: "/sectionTitle/end"
     }
   }
 
@@ -46,7 +77,13 @@ export default class MainContents extends Vue {
   public pageName: string = ""
   public pageTitleText: string = ""
   public markdownTextObject: {[key: string]: string} = {
-    template: templateMd.source
+    template: templateMd.source,
+    page_1: page1Md.source,
+    page_2: page2Md.source,
+    page_3: page3Md.source,
+    page_4: page4Md.source,
+    page_5: page5Md.source,
+    page_6: page6Md.source
   }
 
   /**

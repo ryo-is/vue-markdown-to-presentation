@@ -10,10 +10,10 @@ import PageTitle from "@/components/pageTitle/PageTitle.vue"
 export default class Introduction extends Vue {
   public pageTitleText: string = "自己紹介"
   public nameText: string = "Ryosuke Izumi / is_ryo"
-  public jobText: string = "IoT / FrontEnd"
-  public communityText: string = "v-kansai / JAWS-UG / Node学園"
+  public jobText: string = "IoT / WebApp (/ Android )"
+  public communityText: string = "AWS / Vue / GraphQL / Serverless"
   public transitionPageInfo: transitionPageInfoType = {
     preb: "/",
-    next: "/mainContents/template"
+    next: "/sectionTitle/page_1"
   }
 }
