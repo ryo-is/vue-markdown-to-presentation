@@ -7,18 +7,18 @@
     text-align: left;
 
     h1 {
-      border-left: 15px solid $vue-light-color;
+      border-left: 1vw solid $vue-light-color;
       font-size: 3vw;
       font-weight: bold;
       line-height: 4.5vw;
       margin: 0;
-      padding-left: 20px;
+      padding-left: 1.2vw;
       text-align: left;
     }
 
     h2, h3, h4 {
       margin: 1rem 0;
-      padding: 0 3rem;
+      padding: 0 3vw;
     }
 
     h2 {
@@ -35,7 +35,7 @@
 
     p, ul {
       font-size: 4vw;
-      margin: 1rem 4rem;
+      margin: 1rem 4vw;
       word-break: break-all;
 
       &.image-wrapper {
@@ -53,7 +53,7 @@
 
     ol {
       font-size: 4vw;
-      margin: 1rem 7rem;
+      margin: 1rem 7vw;
       word-break: break-all;
 
       li {

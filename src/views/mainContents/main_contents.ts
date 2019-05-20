@@ -43,7 +43,7 @@ export default class MainContents extends Vue {
       nextLink: "/sectionTitle/end"
     },
     page_1: {
-      prebLink: "/sectionTitle/page_6",
+      prebLink: "/sectionTitle/page_9",
       nextLink: "/mainContents/page_2"
     },
     page_2: {

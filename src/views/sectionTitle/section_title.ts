@@ -73,7 +73,7 @@ export default class SectionTitle extends Vue {
     },
     page_10: {
       mainText: `実演`,
-      prebLink: "/mainContents/page_3",
+      prebLink: "/mainContents/page_1",
       nextLink: "/sectionTitle/" + this.calcPageNumber("page_10", true),
     },
     page_11: {

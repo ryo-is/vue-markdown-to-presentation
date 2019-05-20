@@ -26,11 +26,11 @@
     }
 
     .change-color-area {
-      bottom: 12px;
-      font-size: 32px;
+      bottom: 1vw;
+      font-size: 3vw;
       opacity: .7;
       position: absolute;
-      right: 12px;
+      right: 1vw;
       z-index: 1001;
     }
 
@@ -57,7 +57,7 @@
     .preb-arrow,
     .next-arrow {
       bottom: 0;
-      height: 56px;
+      height: 4vw;
       margin: auto;
       opacity: .2;
       position: absolute;
