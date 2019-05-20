@@ -13,7 +13,7 @@
     .self-image {
       left: 5vw;
       position: absolute;
-      top: 10vh;
+      top: 10vw;
       width: 24vw;
     }
   }
@@ -21,18 +21,18 @@
   .text-content {
     box-sizing: border-box;
     height: 100%;
-    padding-top: 5vh;
+    padding-top: 5vw;
     text-align: left;
 
     .text-area {
-      margin-top: 20px;
+      margin-top: 2vw;
       position: relative;
 
       .tag-mark {
         bottom: 0;
         color: $vue-light-color;
         font-size: 1.8vw;
-        line-height: 4vw;
+        line-height: 4.5vw;
         margin: auto;
         padding-left: .5vw;
         position: absolute;
@@ -40,10 +40,10 @@
       }
 
       .tag {
-        border-bottom: 5px solid $vue-light-color;
+        border-bottom: .5vw solid $vue-light-color;
         font-size: 3vw;
         font-weight: bold;
-        line-height: 4vw;
+        line-height: 4.5vw;
         padding-left: 4vw;
         width: 80%;
       }
@@ -51,7 +51,7 @@
       .text {
         font-size: 3vw;
         line-height: 6vw;
-        padding-left: 4rem;
+        padding-left: 1rem;
       }
     }
 
