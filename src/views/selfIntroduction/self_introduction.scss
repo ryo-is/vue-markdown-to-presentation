@@ -8,10 +8,7 @@
 
   .images-content {
     align-items: center;
-    display: flex;
     height: 100%;
-    justify-content: center;
-    position: relative;
 
     .self-image {
       width: 24vw;
@@ -19,10 +16,7 @@
   }
 
   .text-content-wrapper {
-    align-items: center;
-    display: flex;
     height: 100%;
-    justify-content: center;
 
     .text-content {
       box-sizing: border-box;
