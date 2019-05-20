@@ -2,6 +2,6 @@
 
 - 型名とかインタフェース名が変わる
 - Methodの引数の型が変わる
-- publicだったのがprivateになる
-- といかMethodごと消え去る
+- publicだったのにprivateになってる
+- というかMethodごと消え去る
 - 最後にはClassごと消え去る
