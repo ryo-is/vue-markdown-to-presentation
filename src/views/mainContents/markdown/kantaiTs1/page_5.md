@@ -4,4 +4,4 @@
 - Methodの引数の型が変わる
 - publicだったのにprivateになってる
 - というかMethodごと消え去る
-- 最後にはClassごと消え去る
+- 終いにはClassごと消え去る
