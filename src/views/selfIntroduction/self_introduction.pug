@@ -4,16 +4,17 @@
     el-col.images-content(:span="9")
       .self-image
         img(src="../../assets/self_image.png", alt="self-image")
-    el-col.text-content(:span="15")
-      .name-text-area.text-area
-        .tag-mark ■
-        .tag Name
-        .text {{ nameText }}
-      .jobs-text-area.text-area
-        .tag-mark ■
-        .tag Jobs
-        .text {{ jobText }}
-      .community-text-area.text-area
-        .tag-mark ■
-        .tag Likes
-        .text {{ communityText }}
+    el-col.text-content-wrapper(:span="15")
+      .text-content
+        .name-text-area.text-area
+          .tag-mark ■
+          .tag Name
+          .text {{ nameText }}
+        .jobs-text-area.text-area
+          .tag-mark ■
+          .tag Jobs
+          .text {{ jobText }}
+        .community-text-area.text-area
+          .tag-mark ■
+          .tag Likes
+          .text {{ communityText }}

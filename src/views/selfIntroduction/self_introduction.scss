@@ -7,57 +7,61 @@
   }
 
   .images-content {
+    align-items: center;
+    display: flex;
     height: 100%;
+    justify-content: center;
     position: relative;
 
     .self-image {
-      left: 5vw;
-      position: absolute;
-      top: 10vw;
       width: 24vw;
     }
   }
 
-  .text-content {
-    box-sizing: border-box;
+  .text-content-wrapper {
+    align-items: center;
+    display: flex;
     height: 100%;
-    padding-top: 5vw;
-    text-align: left;
+    justify-content: center;
 
-    .text-area {
-      margin-top: 2vw;
-      position: relative;
+    .text-content {
+      box-sizing: border-box;
+      text-align: left;
+  
+      .text-area {
+        margin-top: 2vw;
+        position: relative;
 
-      .tag-mark {
-        bottom: 0;
-        color: $vue-light-color;
-        font-size: 1.8vw;
-        line-height: 4.5vw;
-        margin: auto;
-        padding-left: .5vw;
-        position: absolute;
-        top: 0;
+        &:first-child {
+          margin: 0;
+        }
+  
+        .tag-mark {
+          bottom: 0;
+          color: $vue-light-color;
+          font-size: 1.8vw;
+          line-height: 4.5vw;
+          margin: auto;
+          padding-left: .5vw;
+          position: absolute;
+          top: 0;
+        }
+  
+        .tag {
+          border-bottom: .5vw solid $vue-light-color;
+          font-size: 3vw;
+          font-weight: bold;
+          line-height: 4.5vw;
+          padding-left: 4vw;
+          width: 80%;
+        }
+  
+        .text {
+          font-size: 3vw;
+          line-height: 6vw;
+          padding-left: 1rem;
+        }
       }
-
-      .tag {
-        border-bottom: .5vw solid $vue-light-color;
-        font-size: 3vw;
-        font-weight: bold;
-        line-height: 4.5vw;
-        padding-left: 4vw;
-        width: 80%;
-      }
-
-      .text {
-        font-size: 3vw;
-        line-height: 6vw;
-        padding-left: 1rem;
-      }
-    }
-
-    ul {
-      list-style: none;
-      margin: 0;
     }
   }
 }
